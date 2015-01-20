@@ -107,58 +107,7 @@ alias brightness='xbacklight -set'
 #---------------------------------------------------------------------------------------------
 # trying to implement the change of the title of the terminal ! 
 #-------------------------------------
-#if [ "$SHELL" = '/bin/bash' ]
-#then
-#    case $TERM in
-#         rxvt|*term)
-#            set -o functrace
-#            trap 'echo -ne "\e]0;"; echo -n $BASH_COMMAND; echo -ne "\007"' DEBUG
-#            export PS1="\e]0;$TERM\007$PS1"
-#         ;;
-#    esac
-#fi
-#
-#-------------------------------------------------------------------------
-#if this is an xterm set the title to user@host:dir
-#case "$TERM" in
-#xterm*|rxvt*)
-#   # PROMPT_COMMAND='echo -ne "\033]0;"'
-#
-#    PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
-#    # Show the currently running command in the terminal title:
-#    # http://www.davidpashley.com/articles/xterm-titles-with-bash.html
-#    show_command_in_title_bar()
-#    {
-#        case "$BASH_COMMAND" in
-#            *\033]0*)
-#                # The command is trying to set the title bar as well;
-#                # this is most likely the execution of $PROMPT_COMMAND.
-#                # In any case nested escapes confuse the terminal, so don't
-#                # output them.
-#                ;;
-#            *)
-#                echo -ne "\033]0;${BASH_COMMAND}\007"
-#                ;;
-#        esac
-#    }
-#    trap show_command_in_title_bar DEBUG
-#    ;;
-#*)
-#    ;;
-#esac
 
-##if [[ "$TERM" == screen* ]]; then
-##  screen_set_window_title () {
-##    local HPWD="$PWD"
-##    case $HPWD in
-##      $HOME) HPWD="~";;
-##      #$HOME/*) HPWD="~${HPWD#$HOME}";;
-##      $HOME/*) HPWD=`basename "$HPWD"`;;
-##    esac
-##    printf '\ek%s\e\\' "$HPWD"
-##  }
-##  PROMPT_COMMAND="screen_set_window_title; $PROMPT_COMMAND"
-##fi
 
 case "$TERM" in
 xterm*|rxvt*)
