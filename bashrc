@@ -1,14 +1,7 @@
-# there is another .bashrc file in /etc/profile.d
 # wellcome ascii
 #cat /bin/misc/animal8.txt;
 /bin/mnost_scripts/battery
 alias cdcd='clear; cd; cat /bin/misc/animal8.txt'
-alias home='cd;  /bin/mnost_scripts/battery'
-alias bones='cd /home/mnost/googleDrive/Bones/ ; ls --group-directories-first'
-alias dropb='cd /home/mnost/Dropbox/ ; ls --group-directories-first'
-alias Doc='cd /home/mnost/Documents/ ; ls --group-directories-first'
-alias Down='cd /home/mnost/Downloads/ ; ls --group-directories-first'
-alias pystuff='cd /home/mnost/Documents/python_suff/ ; ls --group-directories-first'
 alias ipy='ipython --pylab'
 alias ipyn='ipython notebook . &'
 alias ipyStartup_old='cd /home/mnost/.config/ipython/profile_default/startup/'
@@ -17,12 +10,8 @@ alias lls='ls -X --group-directories-first --format=single-column'
 alias ls='ls -X --color=auto --group-directories-first'
 alias lt='ls -ltr'
 alias lsd='ls -d */'
-alias Idea='cd /home/mnost/Documents/Idea_Rinfuz/ ; ls'
 alias cal='echo; date; echo; ncal -b; echo'
 alias term='gnome-terminal --full-screen'
-#alias thunderbird='thunderbird 2>.nul &'
-alias thunderbird='thunderbird 2> /dev/null &'
-alias folder_file_size='du -ch | grep total'
 
 function openjpg { (ls -l *.[jJ][pP][gG] | awk '/^-/{file=$9}END{cmd="gnome-open " file; system(cmd)}') }
 function openpng { (ls -l *.[pP][nN][gG] | awk '/^-/{file=$9}END{cmd="gnome-open " file; system(cmd)}') }
@@ -32,25 +21,13 @@ function openlast_modified { (ls -tr | sed -n '$p' | awk '{cmd="gnome-open " $0;
 
 alias mem_chach_clear='su free && sync && echo 3 > /proc/sys/vm/drop_caches && free'
 
-#alias cdl='cd  && ls  '
-#cdl() { clear ; cd "$1" ; tput setaf 1; tput setab 7; pwd ; tput sgr 0; tput sgr 0 ; ls ; }
 cdl() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
-#cdl() { clear ; cd "$1" ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
 cld() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
-#cld() { clear ; cd "$1" ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
 cdp() { clear ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}
 
 # TAB autocomplete directories on cd like zsh :
-#bind 'TAB:possible-completions' ; 
-#bind 'TAB:menu-complete'
-#bind '"\e[Z":menu-complete-backward'
 bind '"\e[1;2A":menu-complete-backward'  # autocomplete LEFT-SHIFT+ UP / DOWN arrows !!!!
 bind '"\e[1;2B":menu-complete'
-#bind '"{":menu-complete-backward'  # autocomplete to prevent complication with SHIFT+ARROWS UP/DOWN
-#bind '"}":menu-complete'
-#bind '"^[":menu-complete-backward'  # autocomplete to prevent complication with SHIFT+ARROWS UP/DOWN
-#bind '"^]":menu-complete'
-#bind 'set show-all-if-ambiguous on'
 
 # History search CTRL+R and type 
 HISTSIZE=999 HISTFILESIZE=999
@@ -62,19 +39,6 @@ alias clc='clear'
 alias open='gnome-open'
 alias peakfit_wine='wine /home/mnost/.wine/drive_c/Program\ Files/PeakFit/pf.exe & '
 alias winplotr_='wine /home/mnost/.wine/drive_c/FullProf_Suite/winplotr.exe & ' 
-alias ssh_mint17_virtual_mashine_R242='ssh -p 3021 balas@129.187.132.44'
-alias ssh_X_mint17_virtual_mashine_R242='ssh -X -p 3021 balas@129.187.132.44'
-alias ssh_skpc014='ssh -X skpc014@129.187.132.43'
-alias ssh_mare='ssh -X mare@129.187.132.44'
-
-alias scp_to_skpc014='echo "scp file skpc014@129.187.132.43:/home/skpc014/Public/"'
-
-#scp# 
-#from remote computers, also VM-s to mnost: 
-#   scp user@129.187.132.177:/home/user/WIEN2k/NiTi/nw.txt /home/mnost/
-#   scp -P 3021 balas@129.187.132.44:/home/balas/Documents/Latex/root_template.zip /home/mnost/
-
-
 alias wifi_ip_get='ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | grep -Eo "([0-9]*\.){3}[0-9]*" | grep -v "127.0.0.1"'
 
 # Show only current directory name (not full path) on bash prompt
@@ -85,17 +49,13 @@ eval "$(dircolors -b .dircolors)"
 	# other physics constants 
 pi=$(echo "scale=10; 4*a(1)" | bc -l)
 
-
-
 #battery check 
 #brightness 
 alias brightness='xbacklight -set'
 
-#---------------------------------------------------------------------------------------------
-# trying to implement the change of the title of the terminal ! 
-#-------------------------------------
-#-------------------------------------------------------------------------
-#if this is an xterm set the title to user@host:dir
+#-------------------------------------------------------------------------------
+# change of the title of the terminal while ALT+TAB 
+#-------------------------------------------------------------------------------
 
 case "$TERM" in
 xterm*|rxvt*)
