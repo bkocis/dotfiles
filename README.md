@@ -1,2 +1,4 @@
-# linux_rel
-my rc files for linux
+Some of rc files soted here 
+They are uploaded fr sake of ease of access 
+
+
