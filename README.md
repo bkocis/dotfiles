@@ -4,9 +4,9 @@ Repository of linux rc files
 
 *bashrc*
 
-	functions for navigation in the shell 
+	functions for navigation in the shell
 
-	functions for tab completions using bind 
+	functions for tab completions using bind
 
 *vimrc*
 
