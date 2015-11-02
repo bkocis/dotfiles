@@ -13,8 +13,13 @@ vnoremap -# :s#^\###<cr>
 "block indent 
 " also use SHIFT+v to select and that SHIFT + > (or <) 
 
-"leave "+ regitry available for the system after closing vi
+"leave "+ registry available for the system after closing vi
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
 "requires xsel 
 
 set mouse=a 
+
+set printoptions=number:y,syntax:n
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
