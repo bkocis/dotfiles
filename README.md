@@ -13,7 +13,7 @@ printing the current working directory as the first line.
 
 Example:
 
-[![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)]
+![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)
 
 ---
 
