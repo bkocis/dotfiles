@@ -1,4 +1,8 @@
-Repository of linux rc files
+# Repository of linux rc files
+
+Example of the simple bash command line customization 
+
+[![bash example](http://raw.github.com/bkocis/linux_rc-s/bash_prompt.gif]
 
 ---
 
