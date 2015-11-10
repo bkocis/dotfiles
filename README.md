@@ -1,11 +1,17 @@
 # Repository of linux rc files
 
-Example of the simple bash command line customization 
+Extend the .bashrc with:
+
+`cdl` as `cdl() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }`
+
+`cdp` as `cdp() { clear ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}`
 
 To reduce the amount of typing for navigation
-function `cdl` and `cdp` are extending the `cd` and `cd ..`, respectivelly
-with the clearing the screen, listing the content of the folder and 
+function `cdl` and `cdp` are extending the `cd` and `cd ..`, respectivelly,
+with the (1) clearing the screen, (2) listing the content of the folder and (3)
 printing the current working directory as the first line.  
+
+Example:
 
 [![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)]
 
@@ -13,16 +19,13 @@ printing the current working directory as the first line.
 
 *bashrc*
 
-	functions for navigation in the shell
-
-	functions for tab completions using bind
 
 *vimrc*
 
 
 *dircolors*
 
-	file type specific color in the shell
+file type specific color in the shell
 
  
 
