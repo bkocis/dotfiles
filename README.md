@@ -2,7 +2,7 @@
 
 Example of the simple bash command line customization 
 
-(https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)
+[(https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)]
 
 ---
 
