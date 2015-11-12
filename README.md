@@ -2,14 +2,15 @@
 
 Extend the .bashrc with:
 
-`cdl` as `cdl() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }`
+`cdl() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }`
 
-`cdp` as `cdp() { clear ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}`
+`cdp() { clear ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}`
 
-To reduce the amount of typing for navigation
 function `cdl` and `cdp` are extending the `cd` and `cd ..`, respectivelly,
-with the (1) clearing the screen, (2) listing the content of the folder and (3)
+with: (1) clearing the screen, (2) listing the content of the folder and (3)
 printing the current working directory as the first line.  
+The `cdl` uses `pushd`, just in case the you hit enter after cd. If that happends 
+type `popd` and you are back where you were. 
 
 Example:
 
@@ -25,7 +26,7 @@ Example:
 
 *dircolors*
 
-file type specific color in the shell
+	file type specific color in the shell
 
  
 
