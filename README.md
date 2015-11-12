@@ -9,7 +9,7 @@ Extend the .bashrc with:
 function `cdl` and `cdp` are extending the `cd` and `cd ..`, respectivelly,
 with: (1) clearing the screen, (2) listing the content of the folder and (3)
 printing the current working directory as the first line.  
-The `cdl` uses `pushd`, just in case the you hit enter after cd. If that happends 
+The `cdl` uses `pushd`, just in case you hit enter after `cd`. If that happends 
 type `popd` and you are back where you were. 
 
 Example:
