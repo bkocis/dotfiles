@@ -1,6 +1,6 @@
 #### Repository of linux rc files
 
- -Extend the functionality of a bash shell by adding a few extra lines to the .bashrc:
+ - Extend the functionality of a bash shell by adding a few extra lines to the .bashrc:
 
 	`cdl() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }`
 
@@ -22,13 +22,14 @@
  - Bash has autocompletion that by using the tabulator the typed beginning of the word is extended only till the next ambiguous letter.
 	In case you want to circulate between all possibilities use `bind` and add these linse to the .bashrc so that by hitting LEFT-SHIFT +the UP arrow the autocompletion will iterate through the list of all possibilities, not just up untill the next common character. 
 
-	`bind '"\e[1;2A":menu-complete-backward'
+	`bind '"\e[1;2A":menu-complete-backward`
+
 	`bind '"\e[1;2B":menu-complete'`
 
 
 
 
- -To further customize the shell use different colors for various extensions.
+ - To further customize the shell use different colors for various extensions.
 	Evaluate the .dircolors by:
 	`eval "$(dircolors -b .dircolors)"`
 
