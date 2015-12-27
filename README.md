@@ -19,16 +19,16 @@
 ![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)
 
 
-- Bash has autocompletion that by using the tabulator the typed beginning of the word is extended only till the next ambiguous letter.
-In case you want to circulate between all possibilities use `bind` and add these linse to the .bashrc so that by hitting LEFT-SHIFT +the UP arrow the autocompletion will iterate through the list of all possibilities, not just up untill the next common character. 
+ - Bash has autocompletion that by using the tabulator the typed beginning of the word is extended only till the next ambiguous letter.
+	In case you want to circulate between all possibilities use `bind` and add these linse to the .bashrc so that by hitting LEFT-SHIFT +the UP arrow the autocompletion will iterate through the list of all possibilities, not just up untill the next common character. 
 
-	`bind '"\e[1;2A":menu-complete-backward'  # autocomplete LEFT-SHIFT+ UP / DOWN arrows !!!!
+	`bind '"\e[1;2A":menu-complete-backward'
 	`bind '"\e[1;2B":menu-complete'`
 
 
 
 
--To further customize the shell use different colors for various extensions.
+ -To further customize the shell use different colors for various extensions.
 	Evaluate the .dircolors by:
 	`eval "$(dircolors -b .dircolors)"`
 
