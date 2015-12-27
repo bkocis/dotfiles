@@ -16,22 +16,23 @@
 
 	Example:
 
-![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)
+	- ![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)
 
 
- - Bash has autocompletion that by using the tabulator the typed beginning of the word is extended only till the next ambiguous letter.
-	In case you want to circulate between all possibilities use `bind` and add these linse to the .bashrc so that by hitting LEFT-SHIFT +the UP arrow the autocompletion will iterate through the list of all possibilities, not just up untill the next common character. 
+ - Default auto completion in bash uses the tabulator key to match up until the next ambiguous character.
+	In case you want to circulate between all possibilities (similaly to zsh default) use `bind`. Adding the following `bind` commands to the .bashrc, the key combination of LEFT-SHIFT + the UP arrow will iterate through all complete possibilities, not just up untill the next common character.  
 
 	`bind '"\e[1;2A":menu-complete-backward`
 
 	`bind '"\e[1;2B":menu-complete'`
 
 
-
-
  - To further customize the shell use different colors for various extensions.
 	Evaluate the .dircolors by:
 	`eval "$(dircolors -b .dircolors)"`
+
+
+
 
 ---
 [my .bashrc](https://github.com/bkocis/linux_rc-s/blob/master/bashrc)
