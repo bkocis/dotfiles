@@ -20,11 +20,14 @@
 
 
  - Default auto completion in bash uses the tabulator key to match up until the next ambiguous character.
-	In case you want to circulate between all possibilities (similaly to zsh default) use `bind`. Adding the following `bind` commands to the .bashrc, the key combination of LEFT-SHIFT + the UP arrow will iterate through all complete possibilities, not just up untill the next common character.  
+	In case you want to circulate between all possibilities (similaly to zsh default) use `bind`. Adding the following `bind` commands to the .bashrc will asign the key combination of LEFT-SHIFT + the UP arrow to bind and will execute the autocomplete by iteration through all complete possibilities, not just up untill the next common character.
 
 	`bind '"\e[1;2A":menu-complete-backward`
 
 	`bind '"\e[1;2B":menu-complete'`
+
+	To list out all available sockets to bind see `bind -ls`. 
+	The LEFT-SHIFT+Up arrow has the `^[[1;2A` metacharacter, while the LEFT-SHIFT+Down arrow has the `^[[1;2B`. 
 
 
  - To further customize the shell use different colors for various extensions.
