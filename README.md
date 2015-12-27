@@ -16,7 +16,7 @@
 
 	Example:
 
-	![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)
+![bash_example](https://raw.github.com/bkocis/linux_rc-s/master/bash_prompt.gif)
 
 
 - Bash has autocompletion that by using the tabulator the typed beginning of the word is extended only till the next ambiguous letter.
