@@ -7,6 +7,8 @@ cdp() { clear ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}
 # TAB autocomplete directories by iterating through possible folder:
 bind '"\e[1;2A":menu-complete-backward'  # autocomplete LEFT-SHIFT+ UP / DOWN arrows !!!!
 bind '"\e[1;2B":menu-complete'
+# it might be that for your terminal you need to disble a scrolling with SHIFT+arrow keys 
+
 
 # History search CTRL+R and type 
 HISTSIZE=999 HISTFILESIZE=999
