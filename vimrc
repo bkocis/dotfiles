@@ -23,3 +23,6 @@ set printoptions=number:y,syntax:n
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
