@@ -2,9 +2,9 @@
 
  - Extend the functionality of a bash shell by adding a few extra lines to the .bashrc:
 
-	`cdl() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }`
+	`cdl() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }`
 
-	`cdp() { clear ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}`
+	`cdp() { clear -x ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}`
 
 	Function `cdl` and `cdp` are extending the `cd` and `cd ..`, respectively,
 	with: (1) clearing the screen, (2) listing the content of the folder and (3)
