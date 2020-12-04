@@ -1,8 +1,8 @@
 
 #functions to extend the navigation in the terminal 
-cdl() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
-cld() { clear ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
-cdp() { clear ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}
+cdl() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
+cld() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
+cdp() { clear -x ; cd .. "$1" ; dirs -c ;tput setaf 1; pwd ; ls ;}
 
 # TAB autocomplete directories by iterating through possible folder:
 bind '"\e[1;2A":menu-complete-backward'  # autocomplete LEFT-SHIFT+ UP / DOWN arrows !!!!
