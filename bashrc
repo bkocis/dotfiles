@@ -11,7 +11,7 @@ bind '"\e[1;2B":menu-complete'
 
 
 # History search CTRL+R and type 
-HISTSIZE=999 HISTFILESIZE=999
+HISTSIZE=1000000000 HISTFILESIZE=1000000000
 
 # Show only current directory name (not full path) on bash prompt
 PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]𐎚\[\033[00m\] '
