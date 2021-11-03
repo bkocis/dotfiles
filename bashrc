@@ -1,8 +1,28 @@
 
+gitb(){
+# add git branch to prompt
+DIR=$(pwd)"/.git"
+if [ -d "$DIR" ]; then
+    var_branch="("$(git branch --show-current)")"
+else
+    var_branch="()"
+fi
+# add python venv to prompt
+if [ -z "$VIRTUAL_ENV" ];
+then
+    PYENV="()"
+else
+    PYENV="("`basename $VIRTUAL_ENV`")"
+fi
+# prompt cosmetics
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;42m\]'$PYENV'\[\033[01;44m\]'$var_branch'\[\033[00m\]:\h\[\033[01;12m\]\$ '
+
+}
+
 #functions to extend the navigation in the terminal 
-cdl() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
-cld() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }
-cdp() { clear -x ; cd .. ; dirs -c ;tput setaf 1; pwd ; ls ;}
+cdl() { clear -x ; gitb ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; gitb ; }
+cld() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; gitb ; }
+cdp() { clear -x ; cd .. ; dirs -c ;tput setaf 1; pwd ; ls ; gitb ; }
 
 # TAB autocomplete directories by iterating through possible folder:
 bind '"\e[1;2A":menu-complete-backward'  # autocomplete LEFT-SHIFT+ UP / DOWN arrows !!!!
