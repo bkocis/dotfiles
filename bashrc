@@ -1,23 +1,18 @@
 
 gitb(){
 # add git branch to prompt
-DIR=$(pwd)"/.git"
-if [ -d "$DIR" ]; then
-    var_branch="("$(git branch --show-current)")"
-else
-    var_branch="()"
-fi
+STATUS=$(git branch --show-current 2> /dev/null)
 # add python venv to prompt
 if [ -z "$VIRTUAL_ENV" ];
 then
-    PYENV="()"
+    PYENV=""
 else
-    PYENV="("`basename $VIRTUAL_ENV`")"
+    PYENV="("`basename $VIRTUAL_ENV`")🦄"
 fi
 # prompt cosmetics
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;42m\]'$PYENV'\[\033[01;44m\]'$var_branch'\[\033[00m\]:\h\[\033[01;12m\]\$ '
-
+PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]'$PYENV''$STATUS'😊\[\033[00m\] '
 }
+
 
 #functions to extend the navigation in the terminal 
 cdl() { clear -x ; gitb ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; gitb ; }
