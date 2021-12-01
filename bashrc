@@ -68,7 +68,8 @@ alias cal='echo; date; echo; ncal -b; echo'
 alias term='gnome-terminal --full-screen'
 
 alias clc='clear'
-alias open='gnome-open'
+# alias open='gnome-open'
+alias open='xdg-open' # for xfce4
 alias wifi_ip_get='ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | grep -Eo "([0-9]*\.){3}[0-9]*" | grep -v "127.0.0.1"'
 alias mem_chach_clear='su free && sync && echo 3 > /proc/sys/vm/drop_caches && free'
 
