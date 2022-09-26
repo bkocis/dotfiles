@@ -1,17 +1,32 @@
 
+# gitb(){
+# # add git branch to prompt
+# STATUS=$(git branch --show-current 2> /dev/null)
+# # add python venv to prompt
+# if [ -z "$VIRTUAL_ENV" ];
+# then
+#     PYENV=""
+# else
+#     PYENV="("`basename $VIRTUAL_ENV`")"
+# fi
+# # prompt cosmetics
+# PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]'$PYENV''$STATUS'😊\[\033[00m\] '
+# }
+
 gitb(){
-# add git branch to prompt
-STATUS=$(git branch --show-current 2> /dev/null)
-# add python venv to prompt
-if [ -z "$VIRTUAL_ENV" ];
-then
-    PYENV=""
-else
-    PYENV="("`basename $VIRTUAL_ENV`")"
-fi
-# prompt cosmetics
-PS1='${debian_chroot:+($debian_chroot)}\[\033[00;31m\]'$PYENV''$STATUS'😊\[\033[00m\] '
+	# add git branch to prompt
+	STATUS=$(git branch --show-current 2> /dev/null)
+	# add python venv to prompt
+	if [ -z "$VIRTUAL_ENV" ];
+	then
+		    PYENV=""
+	    else
+		        PYENV="("`basename $VIRTUAL_ENV`")"
+	fi
+	# prompt cosmetics
+	PS1='\[\033[1;41m\]'pyenv:-$PYENV'\[\033[1;42m\]'gitbranch:-$STATUS'\[\033[1;40m\]\u\[\033[0;38m\]@\h:\w👾 '
 }
+
 
 
 #functions to extend the navigation in the terminal 
