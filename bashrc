@@ -25,13 +25,13 @@ gitb(){
 	fi
 	# prompt cosmetics
 	PS1='\[\033[1;41m\]'pyenv:-$PYENV'\[\033[1;42m\]'gitbranch:-$STATUS'\[\033[1;40m\]\u\[\033[0;38m\]@\h:\w👾 '
+	
 }
 
 
 
 #functions to extend the navigation in the terminal 
 cdl() { clear -x ; gitb ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; gitb ; }
-cld() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; gitb ; }
 cdp() { clear -x ; cd .. ; dirs -c ;tput setaf 1; pwd ; ls ; gitb ; }
 
 # TAB autocomplete directories by iterating through possible folder:
