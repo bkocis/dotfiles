@@ -1,5 +1,7 @@
 #### Repository of linux rc files
 
+### bashrc
+
  - Extend the functionality of a bash shell by adding a few extra lines to the .bashrc:
 
 	`cdl() { clear -x ; cd "$1" ; pushd . > /dev/null ; tput setaf 1; pwd ; tput sgr 0 ; ls ; }`
@@ -35,16 +37,29 @@
 	`eval "$(dircolors -b .dircolors)"`
 
 
+## vimrc
+
+Use VimPlug to install plugins from https://github.com/junegunn/vim-plug
+
+Enable autocomplete with Coc - needs yarn to build and install from .vimrc coc folder 
+
+To support autocomplete from a venv in python, add the line to .vimrc
+
+`let g:python3_host_prog='/usr/bin/python3'`
+
+https://vimawesome.com/plugin/vim-python-virtualenv-hard-things
+
+https://vimawesome.com/plugin/coc-nvim
 
 
 ---
-[my .bashrc](https://github.com/bkocis/linux_rc-s/blob/master/bashrc)
+[.bashrc](https://github.com/bkocis/linux_rc-s/blob/master/bashrc)
 
 
-[my .vimrc](https://github.com/bkocis/linux_rc-s/blob/master/vimrc)
+[.vimrc](https://github.com/bkocis/linux_rc-s/blob/master/vimrc)
 
 
-[my .dircolors](https://github.com/bkocis/linux_rc-s/blob/master/dircolors)
+[.dircolors](https://github.com/bkocis/linux_rc-s/blob/master/dircolors)
 
 
  

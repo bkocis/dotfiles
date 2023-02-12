@@ -26,3 +26,15 @@ cmap w!! w !sudo tee > /dev/null %
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+
+call plug#begin()
+
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'sansyrox/vim-python-virtualenv'
+Plug 'neoclide/coc.nvim'
+
+call plug#end()
+
+let g:python3_host_prog='/usr/bin/python3'
+
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
