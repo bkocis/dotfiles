@@ -51,6 +51,22 @@ https://vimawesome.com/plugin/vim-python-virtualenv-hard-things
 
 https://vimawesome.com/plugin/coc-nvim
 
+For this installation nodejs will be required 
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+`cd ~
+curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+sudo bash /tmp/nodesource_setup.sh
+sudo apt install nodejs`
+
+yarn installation
+`sudo npm install --global yarn`
+
+Coc
+~/.vim/pluggins/coc
+`yarn install`
+
+Coc-python plugin
+`:CocInstall coc-pyright`
 
 ---
 [.bashrc](https://github.com/bkocis/linux_rc-s/blob/master/bashrc)
