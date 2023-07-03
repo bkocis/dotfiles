@@ -36,6 +36,14 @@
 	Evaluate the .dircolors by:
 	`eval "$(dircolors -b .dircolors)"`
 
+## CTRL +R 
+
+```bash
+sudo add-apt-repository ppa:ultradvorka/ppa
+sudo apt-get update
+sudo apt-get install hstr
+```
+https://github.com/dvorka/hstr
 
 ## vimrc
 
