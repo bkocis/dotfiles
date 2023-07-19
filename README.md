@@ -76,6 +76,11 @@ Coc
 Coc-python plugin
 `:CocInstall coc-pyright`
 
+
+### json formatting in vim 
+
+`:%!jq .` in vi, install `jq` first `sudo apt-get jq`
+
 ---
 [.bashrc](https://github.com/bkocis/linux_rc-s/blob/master/bashrc)
 
