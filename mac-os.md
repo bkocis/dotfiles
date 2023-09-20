@@ -74,3 +74,15 @@ step 3 - case: if you have tensorflow in your requirements
 
            pip install -r requirements.txt --extra-index-url xxxx
 ```
+
+
+---
+
+Other settings: 
+
+mouse and trackpad setting 
+https://formulae.brew.sh/cask/unnaturalscrollwheels
+
+
+
+áä are written with Option key + e and u for the umlauts 
