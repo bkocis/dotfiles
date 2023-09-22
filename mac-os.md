@@ -78,11 +78,15 @@ step 3 - case: if you have tensorflow in your requirements
 
 ---
 
-Other settings: 
+Other settings 
+==============
 
-mouse and trackpad setting 
+# Mouse and trackpad setting 
 https://formulae.brew.sh/cask/unnaturalscrollwheels
 
 
+# Keyboard shortcuts 
 
 áä are written with Option key + e and u for the umlauts 
+
+<img src="https://www.webwandtattoo.com/de/img/sc002mb-jpg/folder/products-listado-merchant/aufkleber-schwarze-tastaturkurzbefehle.jpg">
