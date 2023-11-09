@@ -90,3 +90,18 @@ https://formulae.brew.sh/cask/unnaturalscrollwheels
 áä are written with Option key + e and u for the umlauts 
 
 <img src="https://www.webwandtattoo.com/de/img/sc002mb-jpg/folder/products-listado-merchant/aufkleber-schwarze-tastaturkurzbefehle.jpg">
+
+
+
+----
+
+Keyboard commands
+=================
+
+`command`+ `option`+ `esc` - > forse quit
+
+`command` + `tab` + `option` -> maximze or minimize 
+
+firefox -> Chronic (history) -> recentrly closed windows -> reopen tabs 
+
+
