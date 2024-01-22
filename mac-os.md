@@ -105,3 +105,7 @@ Keyboard commands
 firefox -> Chronic (history) -> recentrly closed windows -> reopen tabs 
 
 
+Umlaut letters
+==============
+
+`option` + `u` and type letter ä ë, ö
