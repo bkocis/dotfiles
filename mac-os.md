@@ -73,6 +73,12 @@ step 3 - case: if you have tensorflow in your requirements
                    3.4 install other packages in the requirements.txt as usual:
 
            pip install -r requirements.txt --extra-index-url xxxx
+
+for example after initializing the venv: 
+conda install tensorflow==2.11.0
+conda install -c apple tensorflow-deps
+python -m pip install tensorflow-macos==2.11.0
+
 ```
 
 
