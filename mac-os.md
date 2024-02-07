@@ -97,7 +97,7 @@ https://formulae.brew.sh/cask/unnaturalscrollwheels
 
 <img src="https://www.webwandtattoo.com/de/img/sc002mb-jpg/folder/products-listado-merchant/aufkleber-schwarze-tastaturkurzbefehle.jpg">
 
-
+finder -> enter path using key "⇧⌘G" and paste the full path. 
 
 ----
 
