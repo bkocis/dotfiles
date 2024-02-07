@@ -97,7 +97,6 @@ https://formulae.brew.sh/cask/unnaturalscrollwheels
 
 <img src="https://www.webwandtattoo.com/de/img/sc002mb-jpg/folder/products-listado-merchant/aufkleber-schwarze-tastaturkurzbefehle.jpg">
 
-finder -> enter path using key "⇧⌘G" and paste the full path. 
 
 ----
 
@@ -110,6 +109,9 @@ Keyboard commands
 
 firefox -> Chronic (history) -> recentrly closed windows -> reopen tabs 
 
+finder -> enter path using key "⇧⌘G" and paste the full path. 
+
+https://discussions.apple.com/thread/3911493?sortBy=best
 
 Umlaut letters
 ==============
